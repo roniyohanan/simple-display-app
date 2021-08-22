@@ -19,8 +19,11 @@ module.exports = {
     },
     height: {
       sm: '16px',
-      md: '48px',
-      lg: '60px',
+      md: '40px',
+      lg:'210px'
+    },
+    width:{
+      lg:'320px'
     }
   },
   variants: {
