@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Card = ({headline, subhead, image})=> (
-      <div className='shadow-default rounded-default w-lg'>
+      <div className='box-border shadow-default rounded-default w-lg'>
         <div>
         <img className='h-lg w-lg rounded-default' src={image} alt='' />
         </div>

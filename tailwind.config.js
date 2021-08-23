@@ -2,7 +2,11 @@ module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      gridTemplateColumns: {
+       default: 'repeat(3, minmax(500px, 1fr)) ',
+      }
+    },
     borderRadius: {
      default: '4px',
     },

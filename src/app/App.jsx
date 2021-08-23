@@ -3,17 +3,21 @@ import './App.css';
 import CardsContainer from './components/cards-container';
 import Pagination from './components/pagination';
 import getAllData from '../air-table.service';
+import config from '../config';
+import useWindowDimensions from '../useWindowDimensions';
 
 
 function App() {
   const [currPage, setCurrPage] = useState(1);
   const [allData, setAllData] = useState([]);
   const [lowScreenSize, setLowScreenSize] = useState(false);
+  const {width} = useWindowDimensions();
 
   useEffect(()=>{
     getAllData(setAllData);
-    setLowScreenSize(false); // kkkkkkkkkkkkkk
-   },[]);
+    if(width<config.minWidth) setLowScreenSize(true);
+    else setLowScreenSize(false);
+   },[width]);
   
   return (
     <div>

@@ -16,7 +16,7 @@ function CardsContainer({currPage, allData, lowScreenSize}) {
   },[currPage, allData]);
 
   return (
-    <div className='mt-8 grid grid-cols-3 gap-8 gap-x-1 justify-items-center'>
+    <div className='mt-8 grid grid-cols-default gap-8 justify-items-center'>
       {dataPerPage.map((item)=><Card key={item.id} headline={item.fields['Headline']}
        subhead={item.fields['Sub-headline']} image={item.fields['Header image']} />)}
     </div>
